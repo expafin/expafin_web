@@ -16,11 +16,10 @@ git clone https://github.com/expafin/expafin_web
 cd ~/expafin_web
 virtualenv venv
 source venv/bin/activate
-pip install django gunicorn psycopg2-binary django-environ python-dotenv read_env pillow
+pip install django gunicorn psycopg2-binary django-environ pillow
 django-admin.py startproject expafin_web
 cd expafin_web
 python3 manage.py startapp expafin
-
 
 sudo -u postgres psql
 CREATE DATABASE DATABASE_NAME;   
@@ -43,7 +42,7 @@ sudo ufw allow 8000
 manage.py runserver 0.0.0.0:8000 #check if server is running properly
 
 cd ~/venv
-gunicorn --bind 0.0.0.0:8000 expafin.wsgi
+gunicorn --bind 0.0.0.0:8000 expafin_com.wsgi
 CTRL-C
 deactivate
 
@@ -99,7 +98,7 @@ sudo nano /etc/nginx/sites-available/myproject
             proxy_pass http://unix:/run/gunicorn.sock;
         }
     }
-sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/expafin_web /etc/nginx/sites-enabled
 sudo nginx -t
 sudo systemctl restart nginx
 sudo ufw delete allow 8000
