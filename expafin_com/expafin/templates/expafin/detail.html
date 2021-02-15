@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ExpaFin Ltd Official Website">
+    <meta name="robots" content="all,follow">
+    <title>Expafin: ample funding for good projects</title>
+    <link rel="canonical" href="https://expafin.com/">
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  </head>
+
+  <body>
+
+    <!-- Hero Section-->
+    <section class="bg-light">
+        <div class="container my-3""> 
+          <div class="row">
+            <div class="col-lg-8 order-2 order-lg-1 my-2">
+              <h1>{{ port_detail.title }}</h1>
+              <p class="lead my-2">{{ port_detail.summary }}</p>
+              <p class="text-muted card-text">{{ port_detail.details }}</p>
+              <a href="{% url 'home' %}" class="btn btn-primary text-white shadow">Back</a>
+            </div>
+            <div class="col-lg-4 order-1 order-lg-2">
+                <img class="img-fluid" src={{ port_detail.image.url }} alt="Portfolio project"  > </img> 
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <div class="py-3 bg-secondary  text-white">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-7 text-center text-md-left">
+            <p class="mb-md-0">&copy; 2021 ExpaFin Ltd. All rights reserved. </p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static '/js/bootstrap.bundle.min.js' %}" ></script>
+
+    
+
+  </body>
+</html>
+

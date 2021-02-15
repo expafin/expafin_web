@@ -1,13 +1,18 @@
 # Django settings
 
-## project_folder/settings.py
+## settings.py
 ``` python
 import os
-from environs import Env
+import environ
+
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Read environment variables
-env = Env()
-env.read_env()  # read .env file, if it exists
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+env.read_env(env_file=os.path.join(ROOT_DIR, '.env'))  # read .env file, if it exists
 
 SECRET_KEY = env('SECRET_KEY')
 
@@ -30,8 +35,8 @@ DATABASES = {
     }
 }
 
-LANGUAGE_CODE = 'en-gb'
 
+LANGUAGE_CODE = 'en-gb'
 TIME_ZONE = 'UTC'
 
 STATIC_URL = '/static/'
@@ -41,7 +46,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR
 ```
 
-## project_folder/urls.py
+## urls.py
 ``` python
 from expafin import views
 from django.conf import settings
@@ -55,7 +60,7 @@ urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 ```
 
-## Create project_folder/models.py
+## models.py
 ``` python
 from django.db import models
 

@@ -12,12 +12,15 @@ sudo -H pip3 install --upgrade pip
 sudo -H pip3 install virtualenv
 cd ~
 
-git clone expafin_web
+git clone https://github.com/expafin/expafin_web
 cd ~/expafin_web
 virtualenv venv
 source venv/bin/activate
 pip install django gunicorn psycopg2-binary django-environ python-dotenv read_env pillow
-django-admin.py startproject expafin ~/expafin_web
+django-admin.py startproject expafin_web
+cd expafin_web
+python3 manage.py startapp expafin
+
 
 sudo -u postgres psql
 CREATE DATABASE DATABASE_NAME;   

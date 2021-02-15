@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ExpaFin Ltd Official Website">
+    <meta name="robots" content="all,follow">
+    <title>Expafin: ample funding for good projects</title>
+    <link rel="canonical" href="https://expafin.com/">
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %} ">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  </head>
+
+  <body>
+
+    <!-- Navbar Section-->
+    <section class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="color: cornflowerblue;" href="#"><strong>ExpaFin Ltd</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Portfolio">Portfolio</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#Services">Meet Investors</a></li>
+                  <li><a class="dropdown-item" href="#Services">Pitch Decks</a></li>
+                  <li><a class="dropdown-item" href="#Services">Financial Models</a></li>
+                  <li><a class="dropdown-item" href="#Services">Project Management</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Investor Area</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="mailto:office-web@expafin.com" class="btn btn-primary text-white shadow">Email us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    </section>
+
+    <!-- Hero Section-->
+    <section class="bg-light">
+        <div class="container my-3""> 
+          <div class="row">
+            <div class="col-lg-8 order-2 order-lg-1 my-2">
+              <h1>Ample funding for good companies</h1>
+              <p class="lead my-2">Smaller companies thrive below the radar of investment bankers. The limited acces to capital used to handicap great projects. That's resolved now. We locate appropriate funders for the promising projects by using artificial intelligence for matches made in heaven. </p>
+              
+            </div>
+            <div class="col-lg-4 order-1 order-lg-2">
+                <!-- <img class="img-fluid w-50 my-2" src="{% static 'ExpaFin_Logo_Bicolour_Condensed.svg' %}"  > </img> -->
+                <img class="img-fluid" src="{% static 'workplace_640.jpg' %}" alt="ExpaFin Funding"  > </img> 
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Services-->
+    <section>
+        <div class="container my-3">
+        <a name="Services"><h2>Services</h2></a>
+        <p class="text-muted mb-5">... concept development ... business plan creation ... marketing to investors ... closing funding ... materialising great visions ... <strong>we fill all the dots for you</strong>.</p>
+        <div class="row">
+
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <i class="bi bi-pen" style="font-size: 2rem; color: cornflowerblue;"></i>
+                <h6>Project structuring</h6>
+                <p class="text-muted">We help business owners crystallise ideas into great projects.</p>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <i class="bi bi-journal-richtext" style="font-size: 2rem; color: cornflowerblue;"></i>
+                <h6>Pitch decks</h6>
+                <p class="text-muted">Produce compelling pitch decks to get funders excited.</p>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <i class="bi bi-table" style="font-size: 2rem; color: cornflowerblue;"></i>
+                <h6>Financial models</h6>
+                <p class="text-muted">Draft complete financial projections and models to map the expansion of the company.</p>
+            </div>
+    
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <i class="bi bi-funnel" style="font-size: 2rem; color: cornflowerblue;"></i>
+                <h6>Meet investors</h6>
+                <p class="text-muted">Organise meetings with the most suitable investors.</p>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <i class="bi bi-collection" style="font-size: 2rem; color: cornflowerblue;"></i>
+                <h6>Close funding rounds</h6>
+                <p class="text-muted">Smooth the rough edges and bring the funding to a close.</p>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <i class="bi bi-segmented-nav" style="font-size: 2rem; color: cornflowerblue;"></i>
+                <h6>Project management</h6>
+                <p class="text-muted">Materialise the transformation of great projects into effective operations.</p>
+            </div>
+    </section>
+
+    <!-- Portfolio-->
+    <section class="bg-light">
+        <div class="container">
+            <a name="Portfolio"><h2>Portfolio</h2></a>
+            <p class="lead text-muted mb-3">Selected projects.</p>
+
+            <div class="row">
+                {% for job in jobs.all %}  
+
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card shadow border-0 h-100">
+                        <a href="#">
+                            <img src={{ job.image.url }} alt="" class="card-img-top" preserveAspectRatio="xMidYMid slice" width="100%" height="225">
+                        </a>
+                        <div class="card-body">
+                            <h5> {{ job.title }}</h5>
+                            <p class="text-muted card-text"><a href="{% url 'detail' job.id %}">{{ job.summary }}</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote-->
+    <section>
+        <div class="container my-3">
+        <blockquote class="blockquote text-center mb-0">
+            <i class="bi bi-heart-fill" style="font-size: 2rem; color: cornflowerblue;"></i>
+            <p class="mb-3">The biggest risk is not taking any risk.</p>
+            <footer class="blockquote-footer">Mark Zuckerberg 
+            <cite title="Source Title">before the first funding round for FaceBook</cite>
+            </footer>
+        </blockquote>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <div class="py-5 bg-light">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+            <a name="Contact"><h5>ExpaFin Ltd</h5></a>
+            <ul class="contact-info list-unstyled">
+                <li><a href="mailto:office-web@expafin.com" class="text-dark">office-web@expafin.com</a></li>
+                <li><a href="tel:+442032392060" class="text-dark">+44 (0) 20 3239 2060</a></li>
+            </ul>
+            <p class="text-muted">Office: 20-22 Wenlock Road, London, England, N1 7GU</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="py-3 bg-secondary  text-white">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-7 text-center text-md-left">
+            <p class="mb-md-0">&copy; 2021 ExpaFin Ltd. All rights reserved. </p>
+            </div>
+            <div class="col-md-5 text-center text-md-right">
+            <p class="mb-0">Template By <a href="http://expafin.com/" class="external text-white">ExpaFin</a> </p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static '/js/bootstrap.bundle.min.js' %}" ></script>
+  </body>
+</html>
+
