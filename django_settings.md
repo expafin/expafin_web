@@ -35,6 +35,15 @@ DATABASES = {
     }
 }
 
+TEMPLATES = [
+    {
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.media',
+            ],
+        },
+    },
+]
 
 LANGUAGE_CODE = 'en-gb'
 TIME_ZONE = 'UTC'
