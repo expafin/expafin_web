@@ -83,14 +83,14 @@ sudo systemctl status gunicorn
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
 
-sudo nano /etc/nginx/sites-available/myproject
+sudo nano /etc/nginx/sites-available/expafin_web
     server {
         listen 80;
-        server_name server_domain_or_IP;
+        server_name expafin_web;
 
         location = /favicon.ico { access_log off; log_not_found off; }
         location /static/ {
-            root /home/sammy/myprojectdir;
+            root /home/sm/expafin_web/expafin_com;
         }
 
         location / {
@@ -98,6 +98,9 @@ sudo nano /etc/nginx/sites-available/myproject
             proxy_pass http://unix:/run/gunicorn.sock;
         }
     }
+
+sudo certbot -d expafin.com,www.expafin.com --expand
+
 sudo ln -s /etc/nginx/sites-available/expafin_web /etc/nginx/sites-enabled
 sudo nginx -t
 sudo systemctl restart nginx
