@@ -86,7 +86,7 @@ sudo systemctl restart gunicorn
 sudo nano /etc/nginx/sites-available/expafin_web
     server {
         listen 80;
-        server_name expafin_web;
+        server_name expafin.com www.expafin.com;
 
         location = /favicon.ico { access_log off; log_not_found off; }
         location /static/ {
@@ -98,6 +98,41 @@ sudo nano /etc/nginx/sites-available/expafin_web
             proxy_pass http://unix:/run/gunicorn.sock;
         }
     }
+
+
+
+server {
+    server_name expafin.com;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/sm/expafin_web/expafin_com;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/expafin.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/expafin.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = expafin.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    server_name expafin.com;
+    return 404; # managed by Certbot
+
+
+}
+
 
 sudo certbot -d expafin.com,www.expafin.com --expand
 
@@ -111,5 +146,6 @@ sudo systemctl restart gunicorn
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn.socket gunicorn.service
 sudo nginx -t && sudo systemctl restart nginx
+
 ```
 
