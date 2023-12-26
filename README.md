@@ -1,12 +1,11 @@
-# ExpaFin site structure
-THis is the structure of the expafin.com site
+# Django site structure
+Fast prototyping Django sites
 
 
-## DigitalOcean Setup
-Site is hosted on DigitalOcean.  
-Configuration details here: https://github.com/expafin/expafin_web/blob/main/digitalocean_settings.md  
+## Host Setup
+Configuration details here: https://github.com/expafin/expafin_web/blob/main/host_settings.md  
 The secret variables are stored into a .env file  
-The static files and the database are excluded from the repository  
+The static files and the database are excluded from this repo.
 
 
 ## Django settings
